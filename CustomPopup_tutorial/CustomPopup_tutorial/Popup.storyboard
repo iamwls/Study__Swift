@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Popup View Controller-->
+        <scene sceneID="SkY-9b-pIr">
+            <objects>
+                <viewController storyboardIdentifier="AlertPopupVC" id="rfQ-G0-1Sk" customClass="CustomPopupViewController" customModule="CustomPopup_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yHb-Yh-KCa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJd-HF-BKi" userLabel="BgBtn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="bgBtnClicked:" destination="rfQ-G0-1Sk" eventType="touchUpInside" id="Fkq-LM-var"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6T-lg-AA6" userLabel="contentView">
+                                <rect key="frame" x="82" y="298" width="250" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="안녕하세요!  진예원 입니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGh-uy-ZLT">
+                                        <rect key="frame" x="32.5" y="160" width="185" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="저의 Github 입니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9T2-nR-DZQ">
+                                        <rect key="frame" x="57.5" y="189" width="135.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h29-CH-DwQ">
+                                        <rect key="frame" x="65" y="251" width="120" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="oIf-UE-J5F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                        <state key="normal" title="Github 보러가기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onGithubBtnClicked:" destination="rfQ-G0-1Sk" eventType="touchUpInside" id="VXK-dJ-Xmr"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="85L-f5-oIv">
+                                        <rect key="frame" x="65" y="38" width="120" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="4dF-8b-2Yt"/>
+                                            <constraint firstAttribute="height" constant="120" id="qec-ny-uBp"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="9T2-nR-DZQ" firstAttribute="centerX" secondItem="J6T-lg-AA6" secondAttribute="centerX" id="LNs-1m-C0k"/>
+                                    <constraint firstItem="9T2-nR-DZQ" firstAttribute="top" secondItem="GGh-uy-ZLT" secondAttribute="bottom" constant="8" id="QSz-8c-XHy"/>
+                                    <constraint firstAttribute="bottom" secondItem="h29-CH-DwQ" secondAttribute="bottom" constant="19" id="TzB-qb-xNp"/>
+                                    <constraint firstItem="GGh-uy-ZLT" firstAttribute="centerX" secondItem="J6T-lg-AA6" secondAttribute="centerX" id="VLH-Ub-HZI"/>
+                                    <constraint firstAttribute="width" constant="250" id="YK9-gL-GEv"/>
+                                    <constraint firstItem="GGh-uy-ZLT" firstAttribute="top" secondItem="85L-f5-oIv" secondAttribute="bottom" constant="15" id="Zeq-uY-BZi"/>
+                                    <constraint firstItem="h29-CH-DwQ" firstAttribute="centerX" secondItem="J6T-lg-AA6" secondAttribute="centerX" id="jNd-vy-brw"/>
+                                    <constraint firstItem="85L-f5-oIv" firstAttribute="centerX" secondItem="J6T-lg-AA6" secondAttribute="centerX" id="oeH-yL-kuY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.49764554794520549" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J6T-lg-AA6" firstAttribute="centerX" secondItem="yHb-Yh-KCa" secondAttribute="centerX" id="5X5-td-yss"/>
+                            <constraint firstItem="J6T-lg-AA6" firstAttribute="leading" secondItem="uzn-rl-ZMM" secondAttribute="leading" constant="82" id="6yt-9s-ydm"/>
+                            <constraint firstItem="uzn-rl-ZMM" firstAttribute="trailing" secondItem="J6T-lg-AA6" secondAttribute="trailing" constant="82" id="9ix-gh-Rlq"/>
+                            <constraint firstItem="uzn-rl-ZMM" firstAttribute="bottom" secondItem="J6T-lg-AA6" secondAttribute="bottom" constant="264" id="O63-rU-eJk"/>
+                            <constraint firstItem="SJd-HF-BKi" firstAttribute="bottom" secondItem="uzn-rl-ZMM" secondAttribute="bottom" id="lIW-wU-PRK"/>
+                            <constraint firstItem="SJd-HF-BKi" firstAttribute="top" secondItem="uzn-rl-ZMM" secondAttribute="top" id="nDo-vJ-Kfe"/>
+                            <constraint firstItem="J6T-lg-AA6" firstAttribute="top" secondItem="uzn-rl-ZMM" secondAttribute="top" constant="254" id="pLo-wj-yt1"/>
+                            <constraint firstItem="SJd-HF-BKi" firstAttribute="trailing" secondItem="uzn-rl-ZMM" secondAttribute="trailing" id="s2b-Tg-15e"/>
+                            <constraint firstItem="SJd-HF-BKi" firstAttribute="leading" secondItem="uzn-rl-ZMM" secondAttribute="leading" id="ugr-Qh-G6Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uzn-rl-ZMM"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgBtn" destination="SJd-HF-BKi" id="KTT-CE-3Ah"/>
+                        <outlet property="contentView" destination="J6T-lg-AA6" id="kfN-An-JBu"/>
+                        <outlet property="githubBtn" destination="h29-CH-DwQ" id="AYq-le-iiO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xqq-iC-s8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="github" width="512" height="512"/>
+    </resources>
+</document>
